@@ -1,6 +1,6 @@
 # .Net 版本的taste
 
-,,,
+```
             var model = new FileDataModel(filePath);
             var similarity = new PearsonCorrelationSimilarity(model);
             var neighborhood = new NearestNUserNeighborhood(4, similarity, model);
@@ -17,4 +17,4 @@
                 }
                 Console.WriteLine();
             }
-  ,,,
+```
