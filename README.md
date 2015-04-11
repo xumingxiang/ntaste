@@ -1,6 +1,7 @@
 # .Net 版本的taste
 
 ```
+            string filePath = @"E:\WorkStudio\ntaste\ntaste.Test\datafile\item.csv";
             var model = new FileDataModel(filePath);
             var similarity = new PearsonCorrelationSimilarity(model);
             var neighborhood = new NearestNUserNeighborhood(4, similarity, model);
