@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11953BCD-7924-47C3-B77A-FD9119D919C8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>ntaste</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\common\PriorityQueue.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\common\TasteException.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\common\NoSuchItemException.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\common\NoSuchUserException.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\common\Refreshable.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\common\Weighting.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\AtomicInteger.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\FixedSizeSamplingIterator!1.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\ClusterSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\FarthestNeighborClusterSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\ConjugateGradientOptimizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\KnnItemBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\NonNegativeQuadraticOptimizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\Optimizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SlopeOne\File\FileDiffStorage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SlopeOne\MemoryDiffStorage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SlopeOne\SlopeOneRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\TreeClusteringRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\TreeClusteringRecommender2.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\model\DataModel.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\AbstractDataModel.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\file\FileDataModel.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\Factorizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\AbstractFactorizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\ALSWRFactorizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\PersistenceStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\FilePersistenceStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\ClusteringRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\SlopeOne\DiffStorage.cs" />
+    <Compile Include="org\apache\mahout\math\als\AlternatingLeastSquaresSolver.cs" />
+    <Compile Include="org\apache\mahout\math\als\ImplicitFeedbackAlternatingLeastSquaresSolver.cs" />
+    <Compile Include="org\apache\mahout\math\MatrixUtil.cs" />
+    <Compile Include="org\apache\mahout\math\stats\LogLikelihood.cs" />
+    <Compile Include="org\apache\mahout\math\QRDecomposition.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\Utils.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\eval\DataModelBuilder.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\eval\IRStatistics.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\eval\RecommenderBuilder.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\eval\RecommenderEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\eval\RecommenderIRStatsEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\eval\RelevantItemsDataSplitter.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\BitSet.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\Retriever!2.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\Cache!2.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\FastByIDMap!1.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\FastIDSet.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\RunningAverage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\FixedRunningAverage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\RunningAverageAndStdDev.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\FixedRunningAverageAndStdDev.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\FullRunningAverage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\FullRunningAverageAndStdDev.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\InvertedRunningAverage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\InvertedRunningAverageAndStdDev.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\RefreshHelper.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\SamplingLongPrimitiveIterator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\SkippingIEnumerator!1.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\WeightedRunningAverage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\common\WeightedRunningAverageAndStdDev.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\AbstractDifferenceRecommenderEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\AverageAbsoluteDifferenceRecommenderEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\GenericRecommenderIRStatsEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\GenericRelevantItemsDataSplitter.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\IRStatisticsImpl.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\LoadCallable.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\LoadEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\LoadStatistics.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\OrderBasedRecommenderEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\RMSRecommenderEvaluator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\eval\StatsCallable.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\model\PreferenceArray.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\BooleanItemPreferenceArray.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\model\Preference.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\BooleanPreference.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\BooleanUserPreferenceArray.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\GenericBooleanPrefDataModel.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\GenericDataModel.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\GenericItemPreferenceArray.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\GenericPreference.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\GenericUserPreferenceArray.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\PlusAnonymousUserDataModel.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\PlusAnonymousConcurrentUserDataModel.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\model\PlusAnonymousUserlongPrimitiveIterator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\neighborhood\UserNeighborhood.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\neighborhood\AbstractUserNeighborhood.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\neighborhood\CachingUserNeighborhood.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\neighborhood\NearestNUserNeighborhood.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TopItems.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\neighborhood\ThresholdUserNeighborhood.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\CandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\MostSimilarItemsCandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\AbstractCandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\Recommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\AbstractRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\AllSimilarItemsCandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\AllUnknownItemsCandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\ByRescoreComparator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\ByValueRecommendedItemComparator.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\CachingRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\EstimatedPreferenceCapper.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\ItemBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\GenericItemBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\GenericBooleanPrefItemBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\UserBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\GenericUserBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\GenericBooleanPrefUserBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\RecommendedItem.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\GenericRecommendedItem.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\ItemAverageRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\ItemUserAverageRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\Rescorer!1.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\IDRescorer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\NullRescorer!1.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\NullRescorer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\PreferredItemsNeighborhoodCandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\RandomRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SamplingCandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SimilarUser.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\Factorization.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\NoPersistenceStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\ParallelSGDFactorizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\RatingSGDFactorizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\SVDPlusPlusFactorizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\SVDPreference.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\SVDRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\similarity\ItemSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\AbstractItemSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\similarity\UserSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\AbstractSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\similarity\PreferenceInferrer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\AveragingPreferenceInferrer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\CachingItemSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\CachingUserSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\CityBlockSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\EuclideanDistanceSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\GenericItemSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\GenericUserSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\LogLikelihoodSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\longPairMatchPredicate.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\PearsonCorrelationSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\SpearmanCorrelationSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\TanimotoCoefficientSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\similarity\UncenteredCosineSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\LoggerFactory.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\Logger.cs" />
+    <Compile Include="org\apache\commons\math3\distribution\AbstractIntegerDistribution.cs" />
+    <Compile Include="org\apache\commons\math3\special\Beta.cs" />
+    <Compile Include="org\apache\commons\math3\util\ContinuedFraction.cs" />
+    <Compile Include="org\apache\commons\math3\random\RandomGenerator.cs" />
+    <Compile Include="org\apache\commons\math3\random\BitsStreamGenerator.cs" />
+    <Compile Include="org\apache\commons\math3\special\Gamma.cs" />
+    <Compile Include="org\apache\commons\math3\util\MathUtil.cs" />
+    <Compile Include="org\apache\commons\math3\random\MersenneTwister.cs" />
+    <Compile Include="org\apache\commons\math3\exception\NotStrictlyPositiveException.cs" />
+    <Compile Include="org\apache\commons\math3\distribution\PascalDistribution.cs" />
+    <Compile Include="org\apache\commons\math3\primes\Primes.cs" />
+    <Compile Include="org\apache\mahout\common\RandomUtils.cs" />
+    <Compile Include="org\apache\mahout\common\RandomWrapper.cs" />
+    <Compile Include="org\apache\commons\math3\primes\SmallPrimes.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\similarity\precompute\BatchItemSimilarities.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\similarity\precompute\SimilarItem.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\similarity\precompute\SimilarItems.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\similarity\precompute\SimilarItemsWriter.cs" />
+  </ItemGroup>
+  <ItemGroup />
+</Project>
