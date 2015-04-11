@@ -9,7 +9,7 @@
 [assembly: System.Reflection.AssemblyTitle("ntaste")]
 [assembly: System.Reflection.AssemblyDescription("")]
 [assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: System.Reflection.AssemblyCompany("ntaste")]
+[assembly: System.Reflection.AssemblyCompany("")]
 [assembly: System.Reflection.AssemblyProduct("ntaste")]
 [assembly: System.Reflection.AssemblyCopyright("ntaste 2014")]
 [assembly: System.Reflection.AssemblyTrademark("")]
