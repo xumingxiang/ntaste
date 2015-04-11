@@ -1,4 +1,8 @@
 # .Net 版本的taste
+直接翻译自java版的 apache mahout taste
+
+
+###### demo:
 
 ```
 string filePath = @"E:\WorkStudio\ntaste\ntaste.Test\datafile\item.csv";
