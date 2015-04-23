@@ -1,5 +1,5 @@
 # .Net 版本的taste
-直接翻译自java版的 apache mahout taste。支持在java最新版0.9中移除的Slope One、TreeClustering
+直接翻译自java版的协同过滤推荐引擎 apache mahout taste。支持在java最新版0.9中移除的Slope One、TreeClustering
 
 
 ###### demo:
