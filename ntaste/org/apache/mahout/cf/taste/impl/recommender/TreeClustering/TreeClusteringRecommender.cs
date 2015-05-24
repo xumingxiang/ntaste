@@ -8,7 +8,8 @@ using System.Collections.Generic;
 namespace org.apache.mahout.cf.taste.impl.recommender.treeclustering
 {
     /// <summary>
-    /// TODO:not test
+    /// TODO:not test by 徐明祥
+    /// 
     /// </summary>
     public class TreeClusteringRecommender : AbstractRecommender, ClusteringRecommender
     {

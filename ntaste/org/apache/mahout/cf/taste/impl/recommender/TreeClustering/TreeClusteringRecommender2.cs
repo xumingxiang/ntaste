@@ -10,7 +10,7 @@ using System.Linq;
 namespace org.apache.mahout.cf.taste.impl.recommender.treeclustering
 {
     /// <summary>
-    /// TODO:not test
+    /// TODO:not test by 徐明祥
     /// </summary>
     public class TreeClusteringRecommender2 : AbstractRecommender, ClusteringRecommender
     {
