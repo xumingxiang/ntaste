@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -43,17 +43,17 @@
     <Compile Include="org\apache\mahout\cf\taste\common\Weighting.cs" />
     <Compile Include="org\apache\mahout\cf\taste\AtomicInteger.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\common\FixedSizeSamplingIterator!1.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\ClusterSimilarity.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\FarthestNeighborClusterSimilarity.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\ConjugateGradientOptimizer.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\KnnItemBasedRecommender.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\NonNegativeQuadraticOptimizer.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\Knn\Optimizer.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SlopeOne\File\FileDiffStorage.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SlopeOne\MemoryDiffStorage.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SlopeOne\SlopeOneRecommender.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\TreeClusteringRecommender.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\TreeClustering\TreeClusteringRecommender2.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\treeclustering\ClusterSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\treeclustering\FarthestNeighborClusterSimilarity.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\knn\ConjugateGradientOptimizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\knn\KnnItemBasedRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\knn\NonNegativeQuadraticOptimizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\knn\Optimizer.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\slopeone\File\FileDiffStorage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\slopeone\MemoryDiffStorage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\slopeone\SlopeOneRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\treeclustering\TreeClusteringRecommender.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\treeclustering\TreeClusteringRecommender2.cs" />
     <Compile Include="org\apache\mahout\cf\taste\model\DataModel.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\model\AbstractDataModel.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\model\file\FileDataModel.cs" />
@@ -63,7 +63,7 @@
     <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\PersistenceStrategy.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\recommender\svd\FilePersistenceStrategy.cs" />
     <Compile Include="org\apache\mahout\cf\taste\recommender\ClusteringRecommender.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\recommender\SlopeOne\DiffStorage.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\recommender\slopeone\DiffStorage.cs" />
     <Compile Include="org\apache\mahout\math\als\AlternatingLeastSquaresSolver.cs" />
     <Compile Include="org\apache\mahout\math\als\ImplicitFeedbackAlternatingLeastSquaresSolver.cs" />
     <Compile Include="org\apache\mahout\math\MatrixUtil.cs" />
@@ -149,7 +149,7 @@
     <Compile Include="org\apache\mahout\cf\taste\recommender\IDRescorer.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\recommender\NullRescorer!1.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\recommender\NullRescorer.cs" />
-    <Compile Include="org\apache\mahout\cf\taste\impl\recommender\PreferredItemsNeighborhoodCandidateItemsStrategy.cs" />
+    <Compile Include="org\apache\mahout\cf\taste\model\PreferredItemsNeighborhoodCandidateItemsStrategy.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\recommender\RandomRecommender.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SamplingCandidateItemsStrategy.cs" />
     <Compile Include="org\apache\mahout\cf\taste\impl\recommender\SimilarUser.cs" />
